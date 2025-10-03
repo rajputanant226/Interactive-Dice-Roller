@@ -1,0 +1,68 @@
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        margin: 0;
+        color:#fff;
+    }
+    h1{
+        margin-bottom: 20px;
+        text-shadow: 0 0 12px #00ffcc;
+        animation: glowText 2s infinite alternate;
+    }
+        @keyframes glowText {
+      from { text-shadow: 0 0 8px #00ffcc; }
+      to { text-shadow: 0 0 20px #00ffee; }
+    }
+    .dice{
+      width: 120px;
+      height: 120px;
+      background: #111;
+      border-radius: 16px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      padding:15px;
+      box-shadow: 0 0 20px rgba(0,255,200,0.6);
+      margin-bottom: 20px;
+      transition: transform 0.6s ease-in-out;      
+    }
+    .dot{
+      width: 20px;
+      height: 20px;
+      background: #00ffcc;
+      border-radius: 50%;
+      justify-self: center;
+      align-self: center;  
+      opacity: 0;
+      box-shadow: 0 0 10px #00ffcc;
+      transition: opacity 0.3s ease-in-out;
+    }
+    button {
+      background: linear-gradient(90deg, #00ffcc, #00ffee);
+      color: black;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 0 12px #00ffee;
+    }
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00ffee;
+    }
+    .result {
+      margin-top: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #00ffcc;
+      text-shadow: 0 0 8px #00ffee;
+    }
